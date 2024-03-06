@@ -3,7 +3,7 @@ import { webSocketServerConfiguration, webSocketServerOnConnection } from "./con
 
 const wss = new WebSocketServer(webSocketServerConfiguration);
 
-wss.on('connection', webSocketServerOnConnection);
+wss.on('connection', (wS, req) => webSocketServerOnConnection(wS, req, wss));
 
 wss.on('close', () => console.log(' 👋 bye bye'));
 
