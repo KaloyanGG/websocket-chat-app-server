@@ -1,7 +1,4 @@
-import { webSocketServerConfiguration } from "./config/webSocketServerConfig";
 import App from "./app";
 
-const app = new App(webSocketServerConfiguration);
+const app = new App();
 app.start();
-
-
