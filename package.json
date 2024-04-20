@@ -2,24 +2,27 @@
   "name": "websocket-chat-app-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
-    "start": "tsc -b && node dist/main.js",
+    "start": "node dist/app.js",
+    "dev": "tsc -b && node dist/app.js",
     "build": "tsc -b",
     "tsx-watch": "tsx --watch src/main.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kaloyan Georgiev",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.21",
-    "@types/node": "^20.11.21"
+    "@types/node": "^20.11.21",
+    "@types/winston": "^2.4.4"
   },
   "dependencies": {
     "@types/uuid": "^9.0.8",
     "@types/ws": "^8.5.10",
     "express": "^4.18.3",
     "uuid": "^9.0.1",
+    "winston": "^3.12.0",
     "ws": "^8.16.0"
   }
 }
